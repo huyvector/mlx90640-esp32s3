@@ -1,0 +1,157 @@
+{
+  "date": "2026-11-18",
+  "release": "Thermal Glow / C-F-K / SD format / embedded DOOM",
+  "board": "LCDWIKI ES3C28P ESP32-S3 N16R8",
+  "upstream": "https://github.com/embedded-kiddie/MLX90640",
+  "upstream_commit": "b0c377f78f5775a95969783428eb142f027ce64b",
+  "fqbn": "esp32:esp32:esp32s3:UploadSpeed=921600,USBMode=hwcdc,CDCOnBoot=cdc,MSCOnBoot=default,DFUOnBoot=default,UploadMode=default,CPUFreq=240,FlashMode=qio,FlashSize=16M,PartitionScheme=custom,DebugLevel=none,PSRAM=opi,LoopCore=1,EventsCore=1,EraseFlash=none,JTAGAdapter=default,ZigbeeMode=default",
+  "arduino_esp32": "3.3.5",
+  "lovyangfx": "1.2.19",
+  "adafruit_busio": "1.17.4",
+  "firmware_origin": "Exact final Arduino IDE upload cache; all 230 runtime headers/C/C++ files matched after removing generated #line directives. Firmware was booted and tested on the board.",
+  "flash": {
+    "mode": "dio",
+    "frequency": "80m",
+    "size": "16MB",
+    "partition_scheme": "custom",
+    "app_offset": "0x10000",
+    "app_partition_bytes": 10485760,
+    "nvs_offset": "0x9000",
+    "nvs_bytes": 20480,
+    "game_fs_offset": "0xA10000"
+  },
+  "application_file_bytes": 5438752,
+  "cli_program_bytes": 5438419,
+  "static_ram_bytes": 143404,
+  "sha256": {
+    "bootloader.bin": "d9263d09dd8c95efe3761bd53613848f3a7f05824720f71c8a44b8cdfec788e3",
+    "partitions.bin": "26a0fb807b150f8199bafac6479b4b2d3766a365ca589b5e80f5c1353f4b6350",
+    "boot_app0.bin": "f94c5d786a7a8fab06ac5d10e33bf37711a6697636dc037559ea19cc410a17f0",
+    "camera.bin": "cdd6b2684f885d9584ee3e6699b23d2a31713b9644bf3cf3572bc212768d425e"
+  },
+  "runtime_source_files": 231,
+  "pins": {
+    "sda": 16,
+    "scl": 15,
+    "battery_adc": 9,
+    "shutter": null
+  },
+  "i2c_hz": 400000,
+  "fps_options": [
+    2,
+    4,
+    6,
+    8
+  ],
+  "default_fps": 8,
+  "temperature": {
+    "units": [
+      "Celsius",
+      "Fahrenheit",
+      "Kelvin"
+    ],
+    "internal_unit": "Celsius",
+    "manual_range_c": [
+      -40,
+      300
+    ],
+    "settings_schema": 3,
+    "emissivity": 0.95,
+    "reflected_temperature": "Ta - 8 C",
+    "absolute_accuracy_reference_tested": false,
+    "statistics_filter_only": true,
+    "marker_position_hysteresis_c": 0.4
+  },
+  "touch": {
+    "rotation": 1,
+    "affine_nvs": true,
+    "last_device_affine_observed": {
+      "xx": 0.98242,
+      "xy": -0.0066,
+      "x0": 2.37,
+      "yx": 0.00069,
+      "yy": 1.20535,
+      "y0": -34.61
+    }
+  },
+  "storage": {
+    "backend": "native SDMMC/FatFs with background manager",
+    "fallback": "4bit/20MHz then 1bit/4MHz",
+    "auto_format": false,
+    "confirmation_required": true,
+    "checks_card_identity_before_format": true,
+    "format_user_test_confirmed": true,
+    "unsupported_filesystem_physical_test_confirmed": false,
+    "write_test_card_capacity_mb": 922
+  },
+  "verified": {
+    "host_asan_ubsan_settings_units_stats_storage_gesture_renderer": true,
+    "host_doom_render_asan": true,
+    "ide_upload_completed_and_device_booted": true,
+    "glow_icons_fonts_labels_user_confirmed": true,
+    "touch_user_confirmed": true,
+    "min_max_stability_user_confirmed": true,
+    "celsius_requested_by_user": true,
+    "affine_restore_after_restart_observed": true,
+    "camera_after_restart_fps": 7.8,
+    "i2c_errors_observed": 0,
+    "bmp_saved_path": "/MLX90640/mlx0009.bmp",
+    "bmp_open_user_confirmed": true,
+    "mp4_test": {
+      "path": "/MLX90640/mlx0007.mp4",
+      "frames": 311,
+      "bytes": 4716070,
+      "dropped": 0,
+      "steady_record_fps_observed": 7.8,
+      "open_ready_ms": 57,
+      "playback_progress_frames": [
+        40,
+        79,
+        118,
+        157,
+        196,
+        236,
+        275
+      ],
+      "playback_progress_ms": [
+        5097,
+        10098,
+        15099,
+        20099,
+        25099,
+        30101,
+        35201
+      ],
+      "playback_finished": true
+    }
+  },
+  "doom": {
+    "upstream": "https://github.com/ozkl/doomgeneric",
+    "commit": "e257a09527062bfb986b6e5e0780839b6cbd5b71",
+    "engine_license": "GPL-2.0-or-later",
+    "iwad": "original unmodified DOOM Shareware 1.9 Episode 1",
+    "iwad_bytes": 4196020,
+    "iwad_md5": "f0cefca49926d00903cf57551d901abe",
+    "embedded_in_application": true,
+    "requires_sd": false,
+    "hidden_gesture": "five Info taps, excluding Back and bottom navigation",
+    "user_launch_control_exit_confirmed": true,
+    "fps_observed": [
+      12.6,
+      13.9
+    ],
+    "free_psram_observed_bytes": 2311776,
+    "audio": false,
+    "exit": "restart to camera preserving NVS"
+  },
+  "limitations": [
+    "Physical absolute temperature accuracy not calibrated",
+    "Battery percent is voltage estimate, ADC not calibrated against multimeter",
+    "Sensor-side decoupling capacitors not physically confirmed",
+    "SD unsupported-filesystem branch physically untested; normal-card format verified by user",
+    "Frame rates depend on scene and card",
+    "DOOM single-point touch controls and no audio",
+    "Power loss during MP4 write/format can leave incomplete data"
+  ],
+  "stock_firmware_backup": false
+}
